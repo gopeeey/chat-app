@@ -4,12 +4,13 @@ const SessionStore = require('./sessionStore');
 const MessageStore = require('./messageStore');
 const io = require('socket.io')(server, {
     cors: {
-        origin: 'https://gopeeey-chat.vercel.app/'
+        origin: 'https://gopeeey-chat.vercel.app'
     }
 });
 
 const sessionStore = new SessionStore();
 const messageStore = new MessageStore();
+
 
 io.use((socket, next) => {
     
