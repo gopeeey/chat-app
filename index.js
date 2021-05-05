@@ -124,6 +124,6 @@ io.on('connection', (socket) => {
 });
 
 
-server.listen(3030, 'localhost', () => {
-    console.log('Server started on port 3030');
+server.listen(process.env.PORT || 3030, 'localhost', () => {
+    console.log(`Server started on port ${process.env.PORT || 3030}`);
 })
