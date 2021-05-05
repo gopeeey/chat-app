@@ -1,11 +1,10 @@
 const http = require('http');
-const _ = require('lodash');
 const server = http.createServer();
 const SessionStore = require('./sessionStore');
 const MessageStore = require('./messageStore');
 const io = require('socket.io')(server, {
     cors: {
-        origin: 'http://localhost:3000'
+        origin: 'https://minichat.vercel.app'
     }
 });
 
