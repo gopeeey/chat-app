@@ -1,8 +1,5 @@
-const http = require('http');
-const express = require('express');
-const app = express();
-const server = http.createServer(app);
-const cors = require('cors');
+const http = require('https');
+const server = http.createServer();
 const SessionStore = require('./sessionStore');
 const MessageStore = require('./messageStore');
 const io = require('socket.io')(server, {
@@ -14,8 +11,6 @@ const io = require('socket.io')(server, {
 
 const sessionStore = new SessionStore();
 const messageStore = new MessageStore();
-
-app.use(cors());
 io.use((socket, next) => {
     
     const username = socket.handshake.auth.username;
