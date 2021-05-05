@@ -1,0 +1,9 @@
+{
+    "name": "private-messaging-backend",
+    "version": "0.0.1",
+    "description": "this is a simple private messaging app for learning socket.io",
+    "dependencies": {
+        "lodash": "^4.17.21",
+        "socket.io": "^4.0.1"
+    }
+}
