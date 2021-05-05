@@ -13,6 +13,7 @@
     "author": "gopeeey",
     "dependencies": {
         "cors": "^2.8.5",
+        "express": "^4.17.1",
         "lodash": "^4.17.21",
         "socket.io": "^4.0.1"
     },
