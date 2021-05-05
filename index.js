@@ -6,9 +6,7 @@ const cors = require('cors');
 const io = require('socket.io')(server, {
     cors: {
         origin: 'https://gopeeey-chat.vercel.app',
-        methods: ["GET", "POST"],
-    allowedHeaders: ["Access-Control-Allow-Origin"],
-    credentials: true
+        methods: ["GET", "POST"]
     }
 });
 
