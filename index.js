@@ -2,6 +2,7 @@ const http = require('http');
 const server = http.createServer();
 const SessionStore = require('./sessionStore');
 const MessageStore = require('./messageStore');
+const cors = require('cors');
 const io = require('socket.io')(server, {
     cors: {
         origin: 'https://gopeeey-chat.vercel.app',
@@ -15,6 +16,7 @@ const sessionStore = new SessionStore();
 const messageStore = new MessageStore();
 
 
+io.use(cors());
 io.use((socket, next) => {
     
     const username = socket.handshake.auth.username;
